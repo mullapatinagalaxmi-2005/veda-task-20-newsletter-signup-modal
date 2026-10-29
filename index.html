@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Signup Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="badge">VEDA TECHNOLOGY · TASK 20</div>
+        <h1>Stay in the Loop!</h1>
+        <p class="description">
+            Get the latest updates, tips, and news delivered straight to your inbox.
+        </p>
+        <button id="openModal" class="primary-btn">Subscribe to Newsletter</button>
+        <p class="note">No spam. Unsubscribe whenever you want.</p>
+    </main>
+
+    <div id="overlay" class="overlay" aria-hidden="true">
+        <section class="modal" role="dialog"
+                 aria-modal="true" aria-labelledby="modalTitle">
+            <button id="closeModal" class="close-btn"
+                    type="button" aria-label="Close dialog">&times;</button>
+
+            <div class="mail-icon">✉️</div>
+            <h2 id="modalTitle">Join Our Newsletter</h2>
+            <p class="modal-description">
+                Be the first to hear about our latest updates and opportunities.
+            </p>
+
+            <form id="signupForm">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="you@example.com" required>
+                <button type="submit" class="primary-btn submit-btn">
+                    Sign Me Up
+                </button>
+            </form>
+
+            <p id="message" role="status" aria-live="polite"></p>
+            <p class="privacy">Your email stays private.</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

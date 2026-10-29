@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #26345f;
+    background: linear-gradient(135deg, #e7ecff, #f8eaff);
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 45px 25px;
+    text-align: center;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 15px 45px rgba(40, 50, 100, 0.12);
+}
+
+.badge {
+    color: #e58a32;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(28px, 6vw, 40px);
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #747e97;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.primary-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 14px 24px;
+    background: #5868db;
+    color: white;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.primary-btn:hover {
+    background: #414fb9;
+    transform: translateY(-2px);
+}
+
+.note {
+    color: #9299aa;
+    font-size: 11px;
+    margin-top: 18px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    background: rgba(20, 27, 55, 0.65);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s, visibility 0.25s;
+}
+
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    padding: 35px 28px;
+    background: white;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.overlay.show .modal {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    color: #69728a;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.mail-icon {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.modal-description {
+    color: #7a8399;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #dce1f0;
+    border-radius: 9px;
+    outline: none;
+    font: inherit;
+    font-size: 13px;
+}
+
+input:focus {
+    border-color: #5868db;
+    box-shadow: 0 0 0 3px rgba(88, 104, 219, 0.12);
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+#message {
+    font-size: 12px;
+    margin-top: 14px;
+}
+
+#message.success {
+    color: #18834b;
+}
+
+#message.error {
+    color: #c43b3b;
+}
+
+.privacy {
+    color: #9299aa;
+    font-size: 11px;
+    margin-top: 18px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 35px 20px;
+    }
+
+    .modal {
+        padding: 32px 20px;
+    }
+}
